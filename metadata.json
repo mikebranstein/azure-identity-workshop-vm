@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Create a VM for the Azure Identity Workshop",
+  "description": "This template allows you to create a Virtual Machine for the Azure Identity Workshop. This template also deploys a Virtual Network, Public IP addresses and a Network Interface.",
+  "summary": "Create a Virtual Machine for the Azure Identity Workshop",
+  "githubUsername": "mikebranstein",
+  "dateUpdated": "2017-05-17"
+}
