@@ -47,54 +47,22 @@
         "description": "Password for the Virtual Machine"
       }
     },
-    "osType": {
-      "type": "string",
-      "allowedValues": [
-        "Windows",
-        "Linux"
-      ],
-      "metadata": {
-        "description": "This is the OS that your VM will be running"
-      }
-    },
     "vmSize": {
       "type": "string",
       "metadata": {
         "description": "This is the size of your VM"
-      }
-    },
-    "newOrExistingVnet": {
-      "allowedValues": [
-        "new",
-        "existing"
-      ],
-      "type": "string",
-      "metadata": {
-        "description": "Select if this template needs a new VNet or will reference an existing VNet"
-      }
-    },
-    "newOrExistingVnetName": {
-      "type": "string",
-      "defaultValue": "",
-      "metadata": {
-        "description": "New or Existing VNet Name"
-      }
+      },
+      "defaultValue": "Standard_DS2_v2"
     },
     "newOrExistingSubnetName": {
       "type": "string",
       "metadata": {
         "description": "New or Existing subnet Name"
       }
-    },
-    "existingVnetResourceGroupName": {
-      "type": "string",
-      "metadata": {
-        "description": "Resource group of the existing VNET"
-      }
     }
   },
   "variables": {
-   "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
     "imageName": "myCustomImage",
     "publicIPAddressName": "[concat(parameters('customVmName'),'IP')]",
     "vmName": "[parameters('customVmName')]",
@@ -150,13 +118,13 @@
         },
         "parameters": {
           "virtualNetworkName": {
-            "value": "[parameters('newOrExistingVnetName')]"
+            "value": "[concat(resourceGroup().name, 'Vnet')]"
           },
           "subnetName": {
-            "value": "[parameters('newOrExistingSubnetName')]"
+            "value": "[concat(resourceGroup().name, 'Vnet')]"
           },
           "existingVnetResourceGroupName": {
-            "value": "[parameters('existingVnetResourceGroupName')]"
+            "value": "[resourceGroup().name]"
           }
         }
       }
@@ -169,7 +137,7 @@
       "properties": {
         "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
         "dnsSettings": {
-          "domainNameLabel": "[parameters('dnsLabelPrefix')]"
+          "domainNameLabel": "[resourceGroup().name]"
         }
       }
     },
