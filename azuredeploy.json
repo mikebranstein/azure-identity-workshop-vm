@@ -20,7 +20,7 @@
       "metadata": {
         "description": "This is the name of the your VM"
       },
-      "defaultValue": "azureidentityworkshopvm"
+      "defaultValue": "azurewrkshopvm"
     },
     "osDiskVhdUri": {
       "type": "string",
@@ -28,12 +28,6 @@
         "description": "Uri of the your user image"
       },
       "defaultValue": "https://azureidentityworkshopvm.blob.core.windows.net/vhds/template20170516105147.vhd"
-    },
-    "dnsLabelPrefix": {
-      "type": "string",
-      "metadata": {
-        "description": "DNS Label for the Public IP. Must be lowercase. It should match with the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$ or it will raise an error."
-      }
     },
     "adminUsername": {
       "type": "string",
@@ -53,12 +47,6 @@
         "description": "This is the size of your VM"
       },
       "defaultValue": "Standard_DS2_v2"
-    },
-    "newOrExistingSubnetName": {
-      "type": "string",
-      "metadata": {
-        "description": "New or Existing subnet Name"
-      }
     }
   },
   "variables": {
