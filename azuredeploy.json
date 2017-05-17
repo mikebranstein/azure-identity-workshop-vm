@@ -6,7 +6,8 @@
       "type": "string",
       "metadata": {
         "description": "This is the name of the your VM"
-      }
+      },
+      "defaultValue": "azureidentityworkshopvm"
     },
     "bootDiagnosticsStorageAccountName": {
       "type": "string",
@@ -24,7 +25,8 @@
       "type": "string",
       "metadata": {
         "description": "Uri of the your user image"
-      }
+      },
+      "defaultValue": "https://azureidentityworkshopvm.blob.core.windows.net/vhds/template20170516105147.vhd"
     },
     "dnsLabelPrefix": {
       "type": "string",
