@@ -22,18 +22,6 @@
       },
       "defaultValue": "azureidentityworkshopvm"
     },
-    "bootDiagnosticsStorageAccountName": {
-      "type": "string",
-      "metadata": {
-        "description": "This is the name of the your storage account"
-      }
-    },
-    "bootDiagnosticsStorageAccountResourceGroupName": {
-      "type": "string",
-      "metadata": {
-        "description": "Resource group of the existing storage account"
-      }
-    },
     "osDiskVhdUri": {
       "type": "string",
       "metadata": {
@@ -244,7 +232,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": "true",
-            "storageUri": "[concat(reference(resourceId(parameters('bootDiagnosticsStorageAccountResourceGroupName'), 'Microsoft.Storage/storageAccounts/', parameters('bootDiagnosticsStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob)]"
+            "storageUri": "[concat(reference(resourceId(resourceGroup(), 'Microsoft.Storage/storageAccounts/', variables('storageAccountName')), variables('apiVersion')).primaryEndpoints.blob)]"
           }
         }
       }
