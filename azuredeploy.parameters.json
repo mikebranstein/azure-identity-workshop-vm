@@ -18,7 +18,7 @@
       "value": "GEN-PASSWORD"
     },
     "osDiskVhdUri": {
-      "value": "https://customubrgdisks112.blob.core.windows.net/vhds/customub20161011133129.vhd"
+      "value": "https://azureidentityworkshopvm.blob.core.windows.net/vhds/template20170516105147.vhd"
     },
     "dnsLabelPrefix": {
       "value": "customklayip2"
