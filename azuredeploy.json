@@ -144,15 +144,15 @@
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
-        "storageProfile": {
-           "imageReference": {
-            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]"
-            }
-        },
         "osProfile": {
           "computerName": "[variables('vmName')]",
           "adminUsername": "dev",
           "adminPassword": "WindowsAzure!"
+        },
+        "storageProfile": {
+           "imageReference": {
+            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]"
+            }
         },
         "networkProfile": {
           "networkInterfaces": [
