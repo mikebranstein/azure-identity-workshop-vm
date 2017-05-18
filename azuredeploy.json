@@ -146,10 +146,7 @@
         },
         "storageProfile": {
            "imageReference": {
-            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]"
-            },
-            "osDisk": {
-              "createOption":"Attach"
+            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]",
             }
         },
         "networkProfile": {
