@@ -42,6 +42,22 @@
   },
   "resources": [
     {
+      "type": "Microsoft.Compute/images",
+      "apiVersion": "2016-04-30-preview",
+      "name": "[concat(variables('vmName'), '-image')]",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "storageProfile": {
+          "osDisk": {
+            "osType": "Windows",
+            "osState": "Generalized",
+            "blobUri": "[variables('osDiskImage')]",
+            "storageAccountType": "Standard_LRS"
+          }
+        }
+      }
+    },
+    {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[variables('storageAccountName')]",
       "apiVersion":"2016-01-01",
@@ -121,21 +137,20 @@
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]",
-        "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]"
+        "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
+        "[concat('Microsoft.Compute/images/', concat(variables('vmName'), '-image'))]"
       ],
       "properties": {
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
         "storageProfile": {
-          "osDisk": {
-            "createOption":"Attach",
-            "name": "[concat(variables('vmName'), 'osDisk')]",
-            "image": {
-              "uri":"[variables('osDiskImage')]"
+           "imageReference": {
+            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]"
             },
-            "osType":"Windows"
-          }
+            "osDisk": {
+              "createOption":"Attach"
+            }
         },
         "networkProfile": {
           "networkInterfaces": [
