@@ -24,7 +24,7 @@
   },
   "variables": {
     "apiVersion": "2015-06-15",
-    "osDiskImage": "https://templatedisks654.blob.core.windows.net/vhds/template20170516105147.vhd",
+    "osDiskImage": "https://azureidentityworkshopvm.blob.core.windows.net/vhds/template20170516105147.vhd",
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
     "publicIPAddressName": "[concat(parameters('customVmName'),'IP')]",
     "vmName": "[parameters('customVmName')]",
