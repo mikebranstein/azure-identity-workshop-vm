@@ -3,31 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "customVmName": {
-      "value": "customVM2"
-    },
-    "userImageStorageAccountName": {
-      "value": "customubrgdisks112"
-    },
-    "userImageStorageAccountResourceGroupName": {
-      "value": "customubrg"
-    },
-    "dnsLabelPrefix": {
-      "value": "customklayip2"
+      "value": "azurewrkshopvm"
     },
     "vmSize": {
-      "value": "Standard_A2"
-    },
-    "newOrExistingVnet": {
-      "value": "existing"
-    },
-    "newOrExistingVnetName": {
-      "value": "customubrg-vnet"
-    },
-    "newOrExistingSubnetName": {
-      "value": "default"
-    },
-    "existingVnetResourceGroupName": {
-      "value": "customubrg"
+      "value": "Standard_DS2_v2"
     }
   }
 }
