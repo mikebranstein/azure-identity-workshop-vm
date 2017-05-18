@@ -7,4 +7,4 @@
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
-This template allows you to create a Virtual Machine from an unmanaged User image vhd. This template also deploys a Virtual Network, Public IP addresses and a Network Interface.
+This template allows you to create a Virtual Machine for the Azure Identity Workshop at [https://mikebranstein.github.io/azure-identity-workshop-instructions](https://mikebranstein.github.io/azure-identity-workshop-instructions). The VM has everything pre-installed that you'll need to do the workshop. It also deploys a Virtual Network, Public IP addresses and a Network Interface.
