@@ -149,6 +149,11 @@
             "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]"
             }
         },
+        "osProfile": {
+          "computerName": "[variables('vmName')]",
+          "adminUsername": "dev",
+          "adminPassword": "WindowsAzure!",
+        },
         "networkProfile": {
           "networkInterfaces": [
             {
