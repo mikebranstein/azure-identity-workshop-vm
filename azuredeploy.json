@@ -31,7 +31,7 @@
     }
   },
   "variables": {
-    "apiVersion": "2015-05-01-preview",
+    "apiVersion": "2015-06-15",
     "osDiskImage": "https://azureidentityworkshopvm.blob.core.windows.net/vhds/template20170516105147.vhd",
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
     "publicIPAddressName": "[concat(parameters('customVmName'),'IP')]",
@@ -89,7 +89,7 @@
       }
     },
     {
-      "apiVersion": "[variables('apiVersion')]",
+      "apiVersion": "2016-03-30",
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('nicName')]",
       "location": "[resourceGroup().location]",
@@ -115,7 +115,7 @@
       }
     },
     {
-      "apiVersion":"[variables('apiVersion')]",
+      "apiVersion":"2016-04-30-preview",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[variables('vmName')]",
       "location": "[resourceGroup().location]",
