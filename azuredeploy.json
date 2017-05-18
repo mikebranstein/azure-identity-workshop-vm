@@ -146,7 +146,7 @@
         },
         "storageProfile": {
            "imageReference": {
-            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]",
+            "id": "[resourceId('Microsoft.Compute/images', concat(variables('vmName'), '-image'))]"
             }
         },
         "networkProfile": {
