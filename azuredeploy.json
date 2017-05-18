@@ -37,14 +37,13 @@
     "vmName": "[parameters('customVmName')]",
     "nicName": "[concat(parameters('customVmName'),'Nic')]",
     "publicIPAddressType": "Dynamic",
-    "apiVersion": "2016-03-30",
     "templatelink": "https://raw.githubusercontent.com/mikebranstein/azure-identity-workshop-vm/master/vnet.json"
   },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[variables('storageAccountName')]",
-      "apiVersion": "2016-01-01",
+      "apiVersion":"2016-01-01",
       "location": "[resourceGroup().location]",
       "sku": {
           "name": "[parameters('storageAccountType')]"
@@ -54,7 +53,7 @@
       }
     },
     {
-      "apiVersion": "2017-05-10",
+      "apiVersion": "2015-01-01",
       "name": "vnet-template",
       "type": "Microsoft.Resources/deployments",
       "properties": {
@@ -115,7 +114,7 @@
       }
     },
     {
-      "apiVersion":"2017-05-10",
+      "apiVersion":"2016-04-30-preview",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[variables('vmName')]",
       "location": "[resourceGroup().location]",
