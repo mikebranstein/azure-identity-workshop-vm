@@ -11,20 +11,8 @@
     "userImageStorageAccountResourceGroupName": {
       "value": "customubrg"
     },
-    "adminUsername": {
-      "value": "user"
-    },
-    "adminPassword": {
-      "value": "GEN-PASSWORD"
-    },
-    "osDiskVhdUri": {
-      "value": "https://azureidentityworkshopvm.blob.core.windows.net/vhds/template20170516105147.vhd"
-    },
     "dnsLabelPrefix": {
       "value": "customklayip2"
-    },
-    "osType": {
-      "value": "Linux"
     },
     "vmSize": {
       "value": "Standard_A2"
