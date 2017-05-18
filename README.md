@@ -1,5 +1,7 @@
 # Create a Virtual Machine from an image
 
+Click one of the buttons below, and we'll create a VM for you using the template in this repo.
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmikebranstein%2Fazure-identity-workshop-vm%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
